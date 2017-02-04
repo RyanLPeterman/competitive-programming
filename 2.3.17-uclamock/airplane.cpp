@@ -41,28 +41,10 @@ void solve() {
     row = row % 4;
 
     ll time = num_cycles * 16;
+
+    char map[] = {4, 5, 6, 3, 2, 1};
+    time += map[letter - 'a'];    
     
-    // TODO:index into array     
-    switch (letter) {
-        case 'f':
-            time += 1;
-            break;
-        case 'e':
-            time += 2;
-            break;
-        case 'd':
-            time += 3;
-            break;
-        case 'c':
-            time += 6;
-            break;
-        case 'b':
-            time += 5;
-            break;
-        case 'a':
-            time +=4;
-            break;
-    }
     // even row
     if (row % 2 == 0) {
         time += 7;
