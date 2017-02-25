@@ -39,8 +39,9 @@ void solve() {
         if (n % i == 0) {
             divs.push_back(i);
 
-            // add other divisor too
-            divs.push_back(n/i);
+            // if we didnt already add divisor
+            if (n/i != i)
+                divs.push_back(n/i);
         }
     }
     if (divs.size() < k) {
